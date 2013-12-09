@@ -6,6 +6,10 @@ This holds scripts used to package of deforestation vetorial data from DETER, us
 
 If you find a bug or any other problem, please open an [issue](https://github.com/oeco/inpe-deter/issues).
 
+## Preprocessed Files available
+
+* [2012/2013](https://github.com/oeco/inpe-deter/raw/master/data/deter_2012-2013.sqlite)
+
 ## How to generate this package
 
 Requirements
@@ -25,6 +29,6 @@ Merge files with:
 
 If you want a specific year:
 
-    ./src/filter.sh
+    ./filter.sh
 
 This will generate the `deter.sqlite` file, located at `data` folder.
