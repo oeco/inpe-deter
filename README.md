@@ -22,6 +22,10 @@ Requirements
 First, clone this repository locally:
 
     git clone git@github.com:oeco/inpe-deter.git
+    
+Enter the directory:
+
+    cd inpe-deter
 
 Download all files by running:
 
