@@ -9,6 +9,7 @@ If you find a bug or any other problem, please open an [issue](https://github.co
 ## Preprocessed Files available
 
 * [2012/2013](https://github.com/oeco/inpe-deter/raw/master/data/deter_2012-2013.sqlite)
+* [2013/2014](https://github.com/oeco/inpe-deter/raw/master/data/deter_2013-2014.sqlite) (until October 2013)
 
 ## How to generate this package
 
