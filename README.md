@@ -17,14 +17,14 @@ Requirements
 
 First, download all files by running:
 
-    ./download.sh
+    ./src/download.sh
 
 Merge files with:
 
-    ./merge.sh
+    ./src/merge.sh
 
 If you want a specific year:
 
-	./filter.sh
+	./src/filter.sh
 
 This will generate the `deter.sqlite` file, located at `data` folder.
