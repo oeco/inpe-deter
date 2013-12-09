@@ -2,9 +2,9 @@
 
 [INPE Deter](http://www.obt.inpe.br/deter/) provides [vector data](http://www.obt.inpe.br/deter/dados) about Amazon deforestation.
 
-This repository offers a Spatialite package of all deforestation vetorial data from DETER, which is used at [InfoAmazonia](http://InfoAmazonia.org).
+This holds scripts used to package of deforestation vetorial data from DETER, used in [InfoAmazonia](http://InfoAmazonia.org).
 
-If there is a broken link or any other problem, please open an [issue](https://github.com/oeco/inpe-deter/issues).
+If you find a bug or any other problem, please open an [issue](https://github.com/oeco/inpe-deter/issues).
 
 ## How to generate this package
 
@@ -17,14 +17,14 @@ Requirements
 
 First, download all files by running:
 
-    ./src/download.sh
+    ./download.sh
 
 Merge files with:
 
-    ./src/merge.sh
+    ./merge.sh
 
 If you want a specific year:
 
-	./src/filter.sh
+    ./src/filter.sh
 
 This will generate the `deter.sqlite` file, located at `data` folder.
