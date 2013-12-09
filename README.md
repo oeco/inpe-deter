@@ -19,7 +19,11 @@ Requirements
 * ogr2ogr
 * spatialite
 
-First, download all files by running:
+First, clone this repository locally:
+
+    git clone git@github.com:oeco/inpe-deter.git
+
+Download all files by running:
 
     ./download.sh
 
