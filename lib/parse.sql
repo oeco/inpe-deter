@@ -12,7 +12,6 @@ BEGIN;
       
       -- month 
       ,case
-        when length(data) > 2 then substr(DATA,3,2) -- for files between August and November 2007
         when sourceshp like 'deter_2010430%' then '04'
         when length(trim(view_date)) > 0 then substr(view_date,6,2)
         when sourceshp like 'Deter_20%' then substr(sourceshp,11,2)      

@@ -1,5 +1,5 @@
 -- load source shapefile
-.loadshp data/merge source ISO-8859-1 4326;
+.loadshp tmp/merge source ISO-8859-1 4326;
 
 BEGIN;
 	CREATE TABLE deter (

@@ -1,3 +1,4 @@
 data/sources*
 data/deter.sqlite
 data/merge.*
+tmp/*
