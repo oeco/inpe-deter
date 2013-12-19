@@ -8,7 +8,7 @@ If you find a bug or any other problem, please open an [issue](https://github.co
 
 [Copy](https://github.com/oeco/inpe-deter/archive/master.zip) or clone this repository locally and run:
 
-./install.sh
+    ./install.sh
 
 This will create a project in your TileMill install and update this map with current INPE-DETER information.
 
