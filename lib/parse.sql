@@ -38,8 +38,10 @@ BEGIN;
       CastToMultiPolygon(geometry)
     from source;
 
-    -- format numbers with zeroes for day and month
+    -- adds zeroes in month numbers, if missing
     update deter set day = substr('0'||day, -2, 2), month = substr('0'||month, -2, 2);
+    
+    -- adds areas with comma as decimal separator
     update deter set area_ha_pt = replace(area_ha,'.',',');
 
 COMMIT;
