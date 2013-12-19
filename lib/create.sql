@@ -7,7 +7,8 @@ BEGIN;
 		year TEXT,
 		month TEXT,
 		day TEXT,
-		area_ha REAL
+		area_ha REAL,
+		area_ha_pt TEXT
 	);
 	SELECT AddGeometryColumn('deter', 'geometry', 4326, 'MULTIPOLYGON', 'XY');
 	SELECT CreateSpatialIndex('deter', 'geometry');

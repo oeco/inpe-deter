@@ -37,10 +37,9 @@ BEGIN;
       as area_ha,
       CastToMultiPolygon(geometry)
     from source;
-COMMIT;
 
--- format numbers for day and month
-BEGIN;
-  update deter set day = substr('0'||day, -2, 2);
-  update deter set month = substr('0'||month, -2, 2);
+    -- format numbers with zeroes for day and month
+    update deter set day = substr('0'||day, -2, 2), month = substr('0'||month, -2, 2);
+    update deter set area_ha_pt = replace(area_ha,'.',',');
+
 COMMIT;
