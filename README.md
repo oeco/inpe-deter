@@ -6,11 +6,16 @@ If you find a bug or any other problem, please open an [issue](https://github.co
 
 ## Updating the map
 
-[Copy](https://github.com/oeco/inpe-prodes/archive/master.zip) or clone this repository locally and run:
+[Copy](https://github.com/oeco/inpe-deter/archive/master.zip) or clone this repository locally and run:
 
 ./install.sh
 
 This will create a project in your TileMill install and update this map with current INPE-DETER information.
+
+## Requirements
+
+* Spatialite 3.1.0
+* Python
 
 ## Data history
 
