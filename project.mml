@@ -1,0 +1,60 @@
+{
+  "bounds": [
+    -75.498,
+    -18.7295,
+    -42.2314,
+    6.4027
+  ],
+  "center": [
+    -55.2063,
+    -7.3189,
+    7
+  ],
+  "format": "png",
+  "interactivity": {
+    "fields": [
+      "year",
+      "month",
+      "day",
+      "area_ha"
+    ],
+    "layer": "deter",
+    "template_teaser": "<!-- deforestation -->\n\n<div class=\"tootip\">\n\t<div class=\"lang-en\">\n\t\t<h3>Areas deforested</h3>\n\t\t<div class=\"date\"><span class=\"label\">Detection date:</span> {{{year}}}/{{{month}}}/{{{day}}} </div>\n\t\t<div class=\"area\"><span class=\"label\">Area:</span> {{{area_ha}}} hectares</div>\t\n\t</div>\n\t<div class=\"lang-es\">\n\t\t<h3>Áreas deforestadas</h3>\n\t\t<div class=\"date\"><span class=\"label\">Fecha de detección:</span> {{{day}}}/{{{month}}}/{{{year}}} </div>\n\t\t<div class=\"area\"><span class=\"label\">Área:</span> {{{area_ha}}} hectáreas</div>\n\t</div>\n\t<div class=\"lang-pt\">\n\t\t<h3>Áreas desmatadas</h3>\n\t\t<div class=\"date\"><span class=\"label\">Data de detecção:</span> {{{day}}}/{{{month}}}/{{{year}}} </div>\n\t\t<div class=\"area\"><span class=\"label\">Área:</span> {{{area_ha_pt}}} hectares</div>\n\t</div>\n</div>\n"
+  },
+  "minzoom": 7,
+  "maxzoom": 12,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "polygon",
+      "extent": [
+        -72.4311294555664,
+        -15.529552459716795,
+        -45.0653190612793,
+        2.7908377647399902
+      ],
+      "Datasource": {
+        "type": "sqlite",
+        "file": "../inpe-deter/data/deter/deter.sqlite",
+        "table": "deter",
+        "attachdb": "",
+        "extent": ""
+      },
+      "id": "deter",
+      "class": "",
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {},
+      "name": "deter"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "name": "inpe-deter",
+  "description": "Deforestation data from INPE-DETER",
+  "attribution": "",
+  "legend": "<!-- deforestation - good images - good lang - - - - - - - - - - - - - - -->\n\n<div class='legend' >\n\n<div class='lang-en'>\n\t<div class=\"l3-deforestation key\"> \n\t\t<img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAN1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAiSURBVDiNY/yvw/CfgYqAiZqGjRo4auCogaMGjho4lAwEADIrAlIVkvZBAAAAAElFTkSuQmCC' /> \n\t\t<span class=\"label\">Deforested Aug 2013 - Oct 2013 </span>\n\t</div>\t\n</div>\n\n<div class='lang-es'>\n\t<div class=\"l3-deforestation key\"> \n\t\t<img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAN1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAiSURBVDiNY/yvw/CfgYqAiZqGjRo4auCogaMGjho4lAwEADIrAlIVkvZBAAAAAElFTkSuQmCC' /> \n\t\t<span class=\"label\">Área deforestada Ago 2013 - Oct 2013 </span>\n\t</div>\n</div>\n\n<div class='lang-pt'>\n\t<div class=\"l3-deforestation key\"> \n\t\t<img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAN1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAiSURBVDiNY/yvw/CfgYqAiZqGjRo4auCogaMGjho4lAwEADIrAlIVkvZBAAAAAElFTkSuQmCC' /> \n\t\t<span class=\"label\">Área desmatada Ago 2013 - Out 2013 </span>\n\t</div>\n</div>\n\n</div>"
+}
