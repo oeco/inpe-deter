@@ -17,6 +17,12 @@ This will create a project in your TileMill install and update this map with cur
 * Spatialite 3.1.0
 * Python
 
+Note: If you are using Ubuntu, first run:
+
+     sudo apt-get install python-gdal
+     lib/shapemerger.py
+
+
 ## Data history
 
 * [2012/2013](https://github.com/oeco/inpe-deter/raw/master/data/deter_2012-2013.sqlite)
