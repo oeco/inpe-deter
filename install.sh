@@ -7,7 +7,7 @@ if [ ! -h ~/Documents/MapBox/project/inpe-deter ]; then
 fi
 
 # if parameter -d, download files
-if [ "$1" = "-d" ]; then
+if [ "$1" = "-d" ] || [ "$1" = "" ]; then
 	# delete old source files
 	rm -rf tmp/sources/*
 	rm -rf tmp/sources-expanded/*
@@ -31,7 +31,10 @@ if [ "$1" = "-d" ]; then
 
 	# This file has a different name pattern, keeping just in case
 	wget -nd -c -P tmp/sources http://www.obt.inpe.br/deter/dados/Deter_20060531_shp.zip
+fi
 
+# if parameter -e, extract files
+if [ "$1" = "-e" ] || [ "$1" = "" ]; then
 	# unzip them
 	unzip -jo tmp/sources/\*.zip -d tmp/sources-expanded
 
@@ -45,16 +48,19 @@ if [ "$1" = "-d" ]; then
 	python lib/shapemerger.py -o tmp/merge.shp tmp/sources-expanded/*.shp
 fi
 
-# start a new db
-rm data/deter/deter.sqlite
-spatialite data/deter/deter.sqlite < lib/create.sql
-spatialite data/deter/deter.sqlite < lib/parse.sql
 
-# remove unwanted records
-echo "delete from deter where cast(year as integer) < "$begining_year";
-delete from deter where cast(year as integer) = "$begining_year" and cast(month as integer) < 8;
-delete from deter where cast(year as integer) = "$ending_year" and cast(month as integer) > 7;
-delete from deter where cast(year as integer) > "$ending_year";
-drop table if exists source; 
-vacuum;" | spatialite data/deter/deter.sqlite
+# if parameter -p, process files
+if [ "$1" = "-p" ] || [ "$1" = "" ]; then
+	# start a new db
+	rm data/deter/deter.sqlite
+	spatialite data/deter/deter.sqlite < lib/create.sql
+	spatialite data/deter/deter.sqlite < lib/parse.sql
 
+	# remove unwanted records
+	echo "delete from deter where cast(year as integer) < "$begining_year";
+	delete from deter where cast(year as integer) = "$begining_year" and cast(month as integer) < 8;
+	delete from deter where cast(year as integer) = "$ending_year" and cast(month as integer) > 7;
+	delete from deter where cast(year as integer) > "$ending_year";
+	drop table if exists source; 
+	vacuum;" | spatialite data/deter/deter.sqlite
+fi
