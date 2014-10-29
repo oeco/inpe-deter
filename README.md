@@ -16,6 +16,7 @@ This will create a project in your TileMill install and update this map with cur
 
 * Spatialite 3.1.0
 * Python
+* TileMill (or the ~/Documents/MapBox/project should exist)
 
 Note: If you are using Ubuntu, first run:
 
